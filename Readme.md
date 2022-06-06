@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Alena Osheeva](https://up.htmlacademy.ru/javascript/26/user/2077829).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Карямин](https://htmlacademy.ru/profile/id959581).
 
 ---
 
