@@ -82,4 +82,4 @@ const getDescription = function () {
   return photoDescriptions;
 };
 
-console.log(getDescription());
+getDescription();
