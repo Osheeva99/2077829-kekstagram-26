@@ -1,4 +1,5 @@
 //Исходные данные
+const COUNTOFPHOTOS = 25;
 const DESCRIPTIONS = [
   'Ем черешню1',
   'Ем черешню2',
@@ -45,15 +46,21 @@ function getRandomPositiveInteger (a, b) {
   return Math.floor(result);
 }
 
+//Фнкция для создания рандомного элемента массива
+function getRandomArrayElement(array) {
+  const randomArrayElement = array[getRandomPositiveInteger (0, array.length - 1)];
+  return randomArrayElement;
+}
+
 //Функция для создания массива с объектами комментариев(3 шт)
 const getComment = function () {
   const comments = [];
 
-  for (let i = 0; i <= 2; i++) {
+  for (let i = 0; i < getRandomPositiveInteger (0, 3); i++) {
     const idComment = getRandomPositiveInteger (1, 1000);
-    const name = NAMES[getRandomPositiveInteger (0, NAMES.length - 1)];
+    const name = getRandomArrayElement(NAMES);
     const idAvatar = getRandomPositiveInteger (1, 6);
-    const message = MESSAGES[getRandomPositiveInteger (0, MESSAGES.length - 1)];
+    const message = getRandomArrayElement(MESSAGES);
     comments[i] = {
       id: idComment,
       avatar: `img/avatar-${idAvatar}.svg`,
@@ -68,7 +75,7 @@ const getComment = function () {
 const getDescription = function () {
   const photoDescriptions = [];
 
-  for (let i = 0; i <= 2; i++) {
+  for (let i = 0; i < COUNTOFPHOTOS; i++) {
     const id = i + 1;
     const likes = getRandomPositiveInteger (15, 200);
     photoDescriptions[i] = {
