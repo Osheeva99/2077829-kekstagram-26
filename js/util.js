@@ -12,5 +12,14 @@ function getRandomArrayElement(array) {
   return randomArrayElement;
 }
 
+//Функция для проверки максимальной длины строки
+function checkStringLength(string,maxLength) {
+  if(string.length<=maxLength) {
+    return true;
+  }
+  return false;
+}
+
 export {getRandomArrayElement};
 export {getRandomPositiveInteger};
+export {checkStringLength};
